@@ -1,11 +1,11 @@
-import * as THREE from '/node_modules/three/build/three.module.js';
+import * as THREE from '../node_modules/three/build/three.module.js';
 
-import { GUI } from             '/node_modules/three/examples/jsm/libs/dat.gui.module.js';
-import { OrbitControls } from   '/node_modules/three/examples/jsm/controls/OrbitControls.js';
-import { Sky } from             '/node_modules/three/examples/jsm/objects/Sky.js';
+import { GUI } from             '../node_modules/three/examples/jsm/libs/dat.gui.module.js';
+import { OrbitControls } from   '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { Sky } from             '../node_modules/three/examples/jsm/objects/Sky.js';
 // import { Stats } from           '/node_modules/three/examples/jsm/libs/stats.module.js';
 
-import { WEBVR } from '/node_modules/three/examples/jsm/vr/WebVR.js';
+import { WEBVR } from '../node_modules/three/examples/jsm/vr/WebVR.js';
 
 var camera, controls, scene, renderer;
 var controller1, controller2;
@@ -153,7 +153,7 @@ function init() {
     window.addEventListener( 'resize', onWindowResize, false );
 
     // getJSON('bsc5-all.json').then((res) => {
-    getJSON('hygdata_short.json').then((res) => {
+    getJSON('hygdata_v3.json').then((res) => {
         star_database = res;
         star_database.sort((a,b) => {
             return a.mag - b.mag
